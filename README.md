@@ -1,4 +1,4 @@
-lw-build (L-SMASH Works Bulid Script)
+lw-build (L-SMASH Works Build Script)
 ========
 ## Requirements
    * NET Framework 4.5 or later
