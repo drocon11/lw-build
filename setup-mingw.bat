@@ -82,11 +82,6 @@ if not exist "mingw32\msys" (
     7za.exe x "msys+7za+wget+svn+git+mercurial+cvs-rev13.7z" -o".\mingw32" -y
 )
 
-if not exist "mingw32\msys" (
-    echo Extract from msys+7za+wget+svn+git+mercurial+cvs-rev13.7z ...
-    7za.exe x "msys+7za+wget+svn+git+mercurial+cvs-rev13.7z" -o".\mingw32" -y
-)
-
 set MINGW32=%CD:\=/%/mingw32
 >mingw32\msys\etc\fstab echo %MINGW32% /mingw
 
