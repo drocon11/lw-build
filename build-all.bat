@@ -1,8 +1,10 @@
-@echo off
 cd "%~dp0"
-call build-yasm.bat
-call build-bzip2.bat
-call build-libav.bat
-call build-l-smash.bat
-call build-L-SMASH-Works-libav-AviUtl.bat
-call build-L-SMASH-Works-libav-VapourSynth.bat
+call build-msinttypes.bat "/wait" "--hold error"
+call build-yasm.bat "/wait" "--hold error"
+call build-bzip2.bat "/wait" "--hold error"
+call build-libav.bat "/wait" "--hold error"
+call build-l-smash.bat "/wait" "--hold error"
+call build-L-SMASH-Works-libav-AviUtl.bat "/wait" "--hold error"
+call build-L-SMASH-Works-libav-VapourSynth.bat "/wait" "--hold error"
+call build-L-SMASH-Works-libav-AviSynth.bat "/wait" "--hold error"
+pause

@@ -12,7 +12,7 @@ if [ ! -f yasm-1.2.0.tar.gz ]; then
 fi
 ./configure --prefix="/mingw"
 make clean
-make -j && make install
+make && make install
 
 echo End of $0
 ls

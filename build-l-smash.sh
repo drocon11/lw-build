@@ -13,7 +13,7 @@ fi
 git pull -v --progress
 ./configure --prefix="/mingw"
 make clean
-make -j lib && make install-lib
+make lib && make install-lib
 
 echo End of $0
 ls
