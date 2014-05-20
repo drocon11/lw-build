@@ -7,4 +7,8 @@ call build-l-smash.bat "/wait" "--hold error"
 call build-L-SMASH-Works-libav-AviUtl.bat "/wait" "--hold error"
 call build-L-SMASH-Works-libav-VapourSynth.bat "/wait" "--hold error"
 call build-L-SMASH-Works-libav-AviSynth.bat "/wait" "--hold error"
+call build-ffmpeg.bat "/wait" "--hold error"
+call build-L-SMASH-Works-ffmpeg-AviUtl.bat "/wait" "--hold error"
+call build-L-SMASH-Works-ffmpeg-VapourSynth.bat "/wait" "--hold error"
+call build-L-SMASH-Works-ffmpeg-AviSynth.bat "/wait" "--hold error"
 pause
