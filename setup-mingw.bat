@@ -4,7 +4,7 @@ cd "%~dp0"
 set CSC=
 @for /d %%1 in (%SystemRoot%\Microsoft.NET\Framework\v*) do @if exist "%%~1\csc.exe" set "CSC=%%~1\csc.exe"
 if "x" == "x%CSC%" (
-    echo Requirement: .NET Framework 2.0 or later
+    echo Requirement: .NET Framework 4.0 or later
     pause
     goto :EOF
 )
