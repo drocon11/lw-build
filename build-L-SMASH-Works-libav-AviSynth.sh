@@ -2,6 +2,10 @@
 
 export PKG_CONFIG_PATH=/mingw/lib/pkgconfig
 
+cd libav
+make install
+cd ..
+
 if [ ! -d L-SMASH-Works-libav ]; then
     mkdir L-SMASH-Works-libav
 fi
@@ -12,12 +16,13 @@ if [ ! -d .git ]; then
 fi
 git pull -v --progress
 cd AviSynth
-cat <<__END_OF_TEXT__ >"LSMASHSourceVCX.sln -Rebuild Release.bat"
+cat <<__END_OF_TEXT__ >"LSMASHSourceVCX.vcxproj.bat"
 set CL=/I..\..\..\..\..\include /I..\..\msinttypes
 set LINK="libpthread.a" /LIBPATH:..\..\..\..\..\i686-w64-mingw32\lib /LIBPATH:..\..\..\..\..\lib\gcc\i686-w64-mingw32\4.8.2 /LIBPATH:..\..\bzip2 /LIBPATH:..\..\..\..\..\lib
-"%VS100COMNTOOLS%..\IDE\devenv" %~n0
+@for /d %%1 in (%SystemRoot%\Microsoft.NET\Framework\v*) do @if exist "%%~1\msbuild.exe" set "MSBUILD=%%~1\msbuild.exe"
+"%MSBUILD%" LSMASHSourceVCX.vcxproj /target:Rebuild /property:Configuration=Release;Platform=Win32;PlatformToolset=v100
 __END_OF_TEXT__
-cmd.exe "/c "LSMASHSourceVCX.sln -Rebuild Release.bat""
+cmd.exe "/c "LSMASHSourceVCX.vcxproj.bat""
 
 echo End of $0
 ls

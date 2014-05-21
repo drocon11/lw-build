@@ -2,6 +2,10 @@
 
 export PKG_CONFIG_PATH=/mingw/lib/pkgconfig
 
+cd libav
+make install
+cd ..
+
 if [ ! -d L-SMASH-Works-libav ]; then
     mkdir L-SMASH-Works-libav
 fi

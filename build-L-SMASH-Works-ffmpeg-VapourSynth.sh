@@ -2,6 +2,10 @@
 
 export PKG_CONFIG_PATH=/mingw/lib/pkgconfig
 
+cd ffmpeg
+make install
+cd ..
+
 if [ ! -d L-SMASH-Works-ffmpeg ]; then
     mkdir L-SMASH-Works-ffmpeg
 fi
