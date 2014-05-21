@@ -12,7 +12,7 @@ if [ ! -d .git ]; then
 fi
 git pull -v --progress
 cd AviSynth
-cat <<__END_OF_TEXT__ >>"LSMASHSourceVCX.sln -Rebuild Release.bat"
+cat <<__END_OF_TEXT__ >"LSMASHSourceVCX.sln -Rebuild Release.bat"
 set CL=/I..\..\..\..\..\include /I..\..\msinttypes
 set LINK="libpthread.a" "libiconv.a" "libswresample.a" /LIBPATH:..\..\..\..\..\i686-w64-mingw32\lib /LIBPATH:..\..\..\..\..\lib\gcc\i686-w64-mingw32\4.8.2 /LIBPATH:..\..\bzip2 /LIBPATH:..\..\..\..\..\lib
 "%VS100COMNTOOLS%..\IDE\devenv" %~n0
