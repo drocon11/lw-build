@@ -1,7 +1,7 @@
 lw-build (L-SMASH Works Build Script)
 ========
 ## Requirements
-   * NET Framework 4.5 or later
+   * .NET Framework 2.0 or later
    * Visual C++ 2010 Express
 
 ## Build
