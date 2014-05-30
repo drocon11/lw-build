@@ -7,8 +7,7 @@ if [ ! -d libav ]; then
 fi
 cd libav
 if [ ! -d .git ]; then
-    git config --global core.autocrlf false
-    git clone -v --progress https://github.com/libav/libav.git ./
+    git clone -v --progress --config core.autocrlf=false https://github.com/libav/libav.git ./
 fi
 git pull -v --progress
 ./configure --prefix="/mingw" --extra-cflags="-fexcess-precision=fast" --enable-memalign-hack --disable-doc --disable-debug --disable-network --disable-programs

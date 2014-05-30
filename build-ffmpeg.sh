@@ -7,8 +7,7 @@ if [ ! -d ffmpeg ]; then
 fi
 cd ffmpeg
 if [ ! -d .git ]; then
-    git config --global core.autocrlf false
-    git clone -v --progress https://github.com/FFmpeg/FFmpeg.git ./
+    git clone -v --progress --config core.autocrlf=false https://github.com/FFmpeg/FFmpeg.git ./
 fi
 git pull -v --progress
 ./configure --prefix="/mingw" --extra-cflags="-fexcess-precision=fast" --enable-avresample --enable-memalign-hack --disable-doc --disable-debug --disable-network --disable-programs

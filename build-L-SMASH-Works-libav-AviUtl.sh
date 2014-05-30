@@ -11,8 +11,7 @@ if [ ! -d L-SMASH-Works-libav ]; then
 fi
 cd L-SMASH-Works-libav
 if [ ! -d .git ]; then
-    git config --global core.autocrlf false
-    git clone -v --progress https://github.com/VFR-maniac/L-SMASH-Works.git ./
+    git clone -v --progress --config core.autocrlf=false https://github.com/VFR-maniac/L-SMASH-Works.git ./
 fi
 git pull -v --progress
 cd AviUtl
