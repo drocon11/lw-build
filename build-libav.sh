@@ -10,7 +10,7 @@ if [ ! -d .git ]; then
     git clone -v --progress --config core.autocrlf=false https://github.com/libav/libav.git ./
 fi
 git pull -v --progress
-./configure --prefix="/mingw" --extra-cflags="-fexcess-precision=fast" --enable-memalign-hack --disable-doc --disable-debug --disable-network --disable-programs
+./configure --prefix="/mingw" --extra-cflags="-fexcess-precision=fast" --enable-memalign-hack --disable-doc --disable-debug --disable-network --disable-programs --disable-decoder=opus
 make clean
 make -r && make install
 
