@@ -32,7 +32,7 @@ if not exist "wget.exe" (
 
 if not exist "7z920.msi" (
     echo Download 7z920.msi ...
-    wget.exe "http://downloads.sourceforge.net/sevenzip/7z920.msi" -O "7z920.msi"
+    wget.exe "http://downloads.sourceforge.net/sevenzip/7z920.msi" -O "7z920.msi" || del "7z920.msi"
     if not exist "7z920.msi" (
         echo Failed to download 7z920.msi
         pause
@@ -42,7 +42,7 @@ if not exist "7z920.msi" (
 
 if not exist "i686-4.8.2-release-posix-sjlj-rt_v3-rev4.7z" (
     echo Download i686-4.8.2-release-posix-sjlj-rt_v3-rev4.7z ...
-    wget.exe "http://downloads.sourceforge.net/mingw-w64/Toolchains%%20targetting%%20Win32/Personal%%20Builds/mingw-builds/4.8.2/threads-posix/sjlj/i686-4.8.2-release-posix-sjlj-rt_v3-rev4.7z" -O "i686-4.8.2-release-posix-sjlj-rt_v3-rev4.7z"
+    wget.exe "http://downloads.sourceforge.net/mingw-w64/Toolchains%%20targetting%%20Win32/Personal%%20Builds/mingw-builds/4.8.2/threads-posix/sjlj/i686-4.8.2-release-posix-sjlj-rt_v3-rev4.7z" -O "i686-4.8.2-release-posix-sjlj-rt_v3-rev4.7z" || del "i686-4.8.2-release-posix-sjlj-rt_v3-rev4.7z"
     if not exist "i686-4.8.2-release-posix-sjlj-rt_v3-rev4.7z" (
         echo Failed to i686-4.8.2-release-posix-sjlj-rt_v3-rev4.7z
         pause
@@ -52,7 +52,7 @@ if not exist "i686-4.8.2-release-posix-sjlj-rt_v3-rev4.7z" (
 
 if not exist "msys+7za+wget+svn+git+mercurial+cvs-rev13.7z" (
     echo Download msys+7za+wget+svn+git+mercurial+cvs-rev13.7z ...
-    wget.exe "http://downloads.sourceforge.net/mingwbuilds/external-binary-packages/msys+7za+wget+svn+git+mercurial+cvs-rev13.7z" -O "msys+7za+wget+svn+git+mercurial+cvs-rev13.7z"
+    wget.exe "http://downloads.sourceforge.net/mingwbuilds/external-binary-packages/msys+7za+wget+svn+git+mercurial+cvs-rev13.7z" -O "msys+7za+wget+svn+git+mercurial+cvs-rev13.7z" || del "msys+7za+wget+svn+git+mercurial+cvs-rev13.7z"
     if not exist "msys+7za+wget+svn+git+mercurial+cvs-rev13.7z" (
         echo Failed to download msys+7za+wget+svn+git+mercurial+cvs-rev13.7z
         pause
