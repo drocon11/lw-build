@@ -1,6 +1,6 @@
 @echo off
 cd "%~dp0"
-copy /y "%~n0.sh" "mingw32\msys\home\%USERNAME%\%~n0.sh"
+copy /y "%~n0.sh" "mingw32\msys\home\%USERNAME%\%~n0.sh" >nul
 set START_OPT=
 if not "x%~1" == "x" set START_OPT=%~1
 set MINTTY_OPT=--hold always
